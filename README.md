@@ -1,3 +1,3 @@
 # Perceptron
 
-Explicação do algoritmo do perceptron: (docs/Perceptron.pdf)
+Explicação do algoritmo do perceptron: (docs/explicacao-perceptron.pdf)
