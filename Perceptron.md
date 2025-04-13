@@ -10,17 +10,17 @@ Os pesos $w_1, w_2,..., w_n$ e o bias $b$ são iniciados com zeros
 2. Calcula a saída do perceptron:
     
     $$
-    z = x_1 * w_1 + x_2 * w_2 + ... + x_n * w_n + b
+    `z = x_1 * w_1 + x_2 * w_2 + ... + x_n * w_n + b`
     $$
     
 3. Aplica a função de ativação:
     
-    $$
+    `
     saída = \begin{cases}
     1 & \text{ se } z \geq 0 \\
     0 & \text{ se } z < 0
     \end{cases}
-    $$
+   `
     
 4. Com para a saída espera:
 Se a saída gerada for diferente da esperada, o perceptron atualiza os pesos.
