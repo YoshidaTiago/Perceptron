@@ -1,7 +1,7 @@
 import numpy as np
 
 class Perceptron:
-    def __init__(self, input_size, learning_rate = 0.1, epochs = 1000):
+    def __init__(self, input_size, epochs, learning_rate = 0.1):
         self.weights = np.zeros(input_size)
         self.bias = 0
         self.learning_rate = learning_rate
@@ -22,6 +22,11 @@ class Perceptron:
 
                 self.weights += self.learning_rate * error * xi
                 self.bias += self.learning_rate * error
+                total_error = abs(error)
+            if total_error == 0:
+                break
+            else:
+                print(self.weights[0], self.weights[1], self.bias)
 
 X = np.array([
     [0, 0],
@@ -32,7 +37,9 @@ X = np.array([
 
 y = np.array([0, 0, 0, 1])
 
-p = Perceptron(input_size=2)
+epochs = int(input("Quantas vezes deseja iterar pelo conjunto? "))
+
+p = Perceptron(input_size=2, epochs=epochs)
 p.train(X, y)
 
 for x in X:
