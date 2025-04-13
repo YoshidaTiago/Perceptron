@@ -9,9 +9,9 @@ Os pesos $w_1, w_2,..., w_n$ e o bias $b$ são iniciados com zeros
 1. Com a entrada $x = (x_1, x_2, ..., x_n)$ e uma saída espera $y$ (sendo 0 ou 1)
 2. Calcula a saída do perceptron:
     
-    $$
+    
     `z = x_1 * w_1 + x_2 * w_2 + ... + x_n * w_n + b`
-    $$
+    
     
 3. Aplica a função de ativação:
     
