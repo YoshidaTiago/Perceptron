@@ -29,9 +29,9 @@ y_virginica_train = y_virginica[indices[:train_size]]
 y_virginica_test = y_virginica[indices[train_size:]]
 
 def train_and_test(X_train, y_train, X_test, y_test, label):
-    clf = Perceptron(max_iter=1000, eta0=learning_rate, random_state=42, tol=None)
-    clf.fit(X_train, y_train)
-    accuracy = clf.score(X_test, y_test) * 100
+    p = Perceptron(max_iter=1000, eta0=learning_rate, random_state=42, tol=None)
+    p.fit(X_train, y_train)
+    accuracy = p.score(X_test, y_test) * 100
     print(f"Precisão no conjunto de teste para {label}: {accuracy:.2f}%")
 
 train_and_test(X_train, y_setosa_train, X_test, y_setosa_test, 'Setosa')
