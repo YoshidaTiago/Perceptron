@@ -15,7 +15,6 @@ train_size = int(len(X) * train_size)
 
 X_train = X[indices[:train_size]]
 X_test = X[indices[train_size:]]
-
 y_setosa_train = y_setosa[indices[:train_size]]
 y_setosa_test = y_setosa[indices[train_size:]]
 
