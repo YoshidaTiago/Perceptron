@@ -26,7 +26,7 @@ class Perceptron:
             if total_error == 0:
                 break
             else:
-                print(self.weights[0], self.weights[1], self.bias)
+                print(f"w1 = {self.weights[0]}, w2 = {self.weights[1]}, bias = {self.bias}")
 
 X = np.array([
     [0, 0],
