@@ -8,12 +8,12 @@ perceptron_pronto - Montado utilizando a biblioteca sklearn, também resolve a f
 
 perceptron_pronto2 - Montado utilizando a biblioteca sklearn, classifica as flores com a base de dados do Saulo.
 
-## Comparação entre manual e feitos com bibliotecas
+## Comparação entre Implementação Manual e com sklearn
 
 ### Função lógica AND
 
-Manual se mostrou mais eficiente, pois demora 3 iterações para otimizar os pesos e bias, enquanto o programa construído com a biblioteca sklearn demora 8.
+A implementação manual se mostrou mais eficiente, pois conseguiu otimizar os pesos e o bias em apenas 3 iterações, enquanto o modelo implementado com a biblioteca sklearn levou 8 iterações para convergir para a solução correta.
 
 ### Classificação de Flores
 
-Manual se mostrou menos efetivo, tendo alta dificuldade em classificar flores versicolor e baixa dificuldade com flores virginica. Já o programa montado com sklearn, teve somente dificuldade com flores versicolor.
+O modelo manual foi menos eficaz. Ele apresentou grande dificuldade em classificar corretamente amostras da espécie Versicolor e um desempenho razoável com a espécie Virginica. Já o programa montado com sklearn, teve somente dificuldade com flores versicolor.
