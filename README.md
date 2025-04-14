@@ -6,4 +6,4 @@ perceptron_pronto - Montado utilizando a biblioteca sklearn, também resolve a f
 
 [perceptron_flowers](docs/Classificao_de_Flores_com_Perceptron.pdf) - Montado sem bibliotecas, classifica as folheres com a base de dados do Saulo.
 
-perceptron_flower - Montado utilizando a biblioteca sklearn, classifica as folheres com a base de dados do Saulo.
+perceptron_pront2 - Montado utilizando a biblioteca sklearn, classifica as folheres com a base de dados do Saulo.
