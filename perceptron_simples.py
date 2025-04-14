@@ -22,7 +22,7 @@ class Perceptron:
 
                 self.weights += self.learning_rate * error * xi
                 self.bias += self.learning_rate * error
-                total_error = abs(error)
+                total_error = error
             if total_error == 0:
                 break
             else:

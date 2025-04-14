@@ -25,8 +25,10 @@ y_versicolor_test = y_versicolor[indices[train_size:]]
 y_virginica_train = y_virginica[indices[:train_size]]
 y_virginica_test = y_virginica[indices[train_size:]]
 
+learning_rate = float(input("Qual taxa de aprendizado deseja utilizar: "))
+
 class Perceptron:
-    def __init__(self, input_size, learning_rate=0.1):
+    def __init__(self, input_size, learning_rate):
         self.weights = np.zeros(input_size)
         self.bias = 0
         self.learning_rate = learning_rate
@@ -55,17 +57,26 @@ class Perceptron:
         accuracy = (correct / len(y)) * 100
         return accuracy
 
-p_setosa = Perceptron(input_size=4)
+p_setosa = Perceptron(input_size=4, learning_rate=learning_rate)
 p_setosa.train(X_train, y_setosa_train)
 accuracy_setosa = p_setosa.test(X_test, y_setosa_test)
-print(f"Precisão no conjunto de teste para Setosa: {accuracy_setosa:.2f}%")
+print(f"\nPrecisão no conjunto de teste para Setosa: {accuracy_setosa:.2f}%")
 
-p_versicolor = Perceptron(input_size=4)
+p_versicolor = Perceptron(input_size=4, learning_rate=learning_rate)
 p_versicolor.train(X_train, y_versicolor_train)
 accuracy_versicolor = p_versicolor.test(X_test, y_versicolor_test)
 print(f"Precisão no conjunto de teste para Versicolor: {accuracy_versicolor:.2f}%")
 
-p_virginica = Perceptron(input_size=4)
+p_virginica = Perceptron(input_size=4, learning_rate=learning_rate)
 p_virginica.train(X_train, y_virginica_train)
 accuracy_virginica = p_virginica.test(X_test, y_virginica_test)
 print(f"Precisão no conjunto de teste para Virginica: {accuracy_virginica:.2f}%")
+
+print("\nSetosa - pesos e bias:")
+print(f"w1 = {p_setosa.weights[0]:.2f}, w2 = {p_setosa.weights[1]:.2f}, w3= {p_setosa.weights[2]:.2f}, w4 = {p_setosa.weights[3]:.2f} bias = {p_setosa.bias:.2f}")
+
+print("\nVersicolor - pesos e bias:")
+print(f"w1 = {p_versicolor.weights[0]:.2f}, w2 = {p_versicolor.weights[1]:.2f}, w3= {p_versicolor.weights[2]:.2f}, w4 = {p_versicolor.weights[3]:.2f} bias = {p_versicolor.bias:.2f}")
+
+print("\nVirginica - pesos e bias:")
+print(f"w1 = {p_virginica.weights[0]:.2f}, w2 = {p_virginica.weights[1]:.2f}, w3= {p_virginica.weights[2]:.2f}, w4 = {p_virginica.weights[3]:.2f} bias = {p_virginica.bias:.2f}")
